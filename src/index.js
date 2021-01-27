@@ -1,3 +1,9 @@
-b = 1;
-const c = 3;
-console.log(b);
+const a = 3;
+const b = 2;
+const c = 'adb';
+
+function sum() {
+  return a + b + c;
+}
+
+sum();
