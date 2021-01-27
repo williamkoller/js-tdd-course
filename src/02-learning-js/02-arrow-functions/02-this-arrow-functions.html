@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>02 This Arrow Functions in JS</title>
+</head>
+<body>
+  <button id="btn">Click me!</button>
+  <script>
+    // recebe o próprio objeto (elemento HTML)
+    const btn = document.getElementById('btn');
+    btn.addEventListener('click', function() {
+      console.log(this);
+    })
+
+    // recebo o window inteiro
+     const btnExample = document.getElementById('btn');
+      btnExample.addEventListener('click', () =>  {
+        console.log(this);
+    })
+
+  </script>
+
+</body>
+</html>
