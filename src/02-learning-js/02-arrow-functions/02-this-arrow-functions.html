@@ -7,6 +7,7 @@
 </head>
 <body>
   <button id="btn">Click me!</button>
+  <button id="btnExample">Click me Example!</button>
   <script>
     // recebe o próprio objeto (elemento HTML)
     const btn = document.getElementById('btn');
@@ -15,7 +16,7 @@
     })
 
     // recebo o window inteiro
-     const btnExample = document.getElementById('btn');
+     const btnExample = document.getElementById('btnExample');
       btnExample.addEventListener('click', () =>  {
         console.log(this);
     })

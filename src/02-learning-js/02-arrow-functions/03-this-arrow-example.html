@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>03 This Arrow Example</title>
+</head>
+<body>
+  <button id="btnA">Make my sandwich!</button>
+  <button id="btn">Make my sadnwich!</button>
+
+  <script>
+
+    // functions using context in blocks
+    const sandwich = {
+      bread: 'white',
+      cheese: 'cheddar',
+
+      prepare: function() {
+        return `I want a sandwich with ${this.bread} bread and ${this.cheese} cheese!`
+      },
+
+      make: function() {
+        var that = this
+        window.setTimeout(function() {
+          console.log(that.prepare())
+        }, 500)
+      }
+    }
+
+    const btnA = document.getElementById('btnA')
+    btnA.addEventListener('click', function() {
+      sandwich.make()
+    })
+
+    // arrow function using context global
+
+    const sadnwich = {
+        bread: 'white',
+        cheese: 'cheddar',
+
+        prepare: function () {
+          return `I want a sadnwich with ${this.bread} bread and ${this.cheese} cheese!`
+        },
+
+        make: function () {
+          window.setTimeout(() =>  {
+            console.log(this.prepare())
+          }, 500)
+        }
+      }
+
+      const btn = document.getElementById('btn')
+      btn.addEventListener('click', function () {
+        sadnwich.make()
+      })
+
+
+
+  </script>
+
+</body>
+</html>
