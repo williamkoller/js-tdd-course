@@ -4,7 +4,7 @@
   "description": "JS com TDD na pratica",
   "main": "index.js",
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "lint": "./node_modules/.bin/eslint"
   },
   "repository": {
     "type": "git",
@@ -15,5 +15,10 @@
   "bugs": {
     "url": "https://github.com/williamkoller/js-tdd-course/issues"
   },
-  "homepage": "https://github.com/williamkoller/js-tdd-course#readme"
+  "homepage": "https://github.com/williamkoller/js-tdd-course#readme",
+  "devDependencies": {
+    "eslint": "^4.0.0",
+    "eslint-config-airbnb-base": "^11.2.0",
+    "eslint-plugin-import": "^2.6.1"
+  }
 }
