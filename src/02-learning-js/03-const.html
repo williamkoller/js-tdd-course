@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>03 const in JS</title>
+</head>
+<body>
+  <script>
+    const secretNumber = 40;
+    const will = {
+      name: 'William',
+      age: 58,
+      size: 98
+    }
+
+    Object.freeze(will)
+
+    will.age = 40;
+
+    console.log(will)
+
+  </script>
+
+</body>
+</html>
