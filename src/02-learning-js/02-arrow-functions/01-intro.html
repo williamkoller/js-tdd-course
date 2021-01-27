@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>01 Intro Arrow Functions in JS</title>
+</head>
+<body>
+  <script>
+    const ireland = ['Dublin', 'Galway', 'Cork']
+    // anonymous function
+    const love = ireland.map(function(name) {
+      return `I love ${name}`
+    })
+
+    const parana = ['Curitiba', 'Londrina', 'Guaratuba']
+
+    const loveArrow = parana.map((name) => {
+      return `I love ${name}`;
+    })
+
+    const loveArrowSingle = parana.map(name => {
+        return `I love ${name}`;
+    })
+
+     const loveArrowOneLine = parana.map(name => `I love ${name}`)
+
+     const loveChain = ireland
+                              .filter(name => name === 'Dublin')
+                              .map(name => `I love ${name}`);
+
+    console.log(loveChain)
+  </script>
+
+</body>
+</html>
